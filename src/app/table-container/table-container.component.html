@@ -4,13 +4,13 @@
       <tr>
         <th>Id</th>
         <th>Box Id</th>
-        <th>Type</th>
+        <th [class]="typeClasses()" (click)="setSortColumn('type')">Type</th>
         <th>Name</th>
         <th>Lower</th>
         <th>Upper</th>
         <th>Reading</th>
         <th>Unit</th>
-        <th>Time</th>
+        <th [class]="timeClasses()" (click)="setSortColumn('time')">Time</th>
       </tr>
     </thead>
 
@@ -18,7 +18,9 @@
       <tr *ngFor="let sensor of sensorReadings">
         <td>{{ sensor.id }}</td>
         <td>{{ sensor.box_id }}</td>
-        <td>{{ sensor.sensor_type }}</td>
+        <td>
+          {{ sensor.sensor_type }}
+        </td>
         <td>{{ sensor.name }}</td>
         <td>{{ sensor.range_l }}</td>
         <td>{{ sensor.range_u }}</td>

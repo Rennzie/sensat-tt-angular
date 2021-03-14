@@ -6,6 +6,14 @@
   overflow-x: hidden;
 }
 
+.click-able {
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: bold;
+}
+
 table {
   display: grid;
   border-collapse: collapse;
@@ -14,7 +22,7 @@ table {
     minmax(100px, 1fr) /*ID*/
     minmax(80px, 1fr) /*BOX_ID*/
     minmax(70px, 1fr) /*TYPE*/
-    minmax(100px, 1fr) /*NAME*/
+    minmax(170px, 1fr) /*NAME*/
     minmax(70px, 1fr) /*RANGE_LOWER*/
     minmax(70px, 1fr) /*RANGE_UPPER*/
     minmax(80px, 1fr) /*READING*/
