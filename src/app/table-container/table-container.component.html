@@ -1,0 +1,31 @@
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Box Id</th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Lower</th>
+        <th>Upper</th>
+        <th>Reading</th>
+        <th>Unit</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let sensor of sensorReadings">
+        <td>{{ sensor.id }}</td>
+        <td>{{ sensor.box_id }}</td>
+        <td>{{ sensor.sensor_type }}</td>
+        <td>{{ sensor.name }}</td>
+        <td>{{ sensor.range_l }}</td>
+        <td>{{ sensor.range_u }}</td>
+        <td>{{ sensor.reading }}</td>
+        <td>{{ sensor.unit }}</td>
+        <td>{{ sensor.reading_ts | date: "MM/d HH:MM" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
